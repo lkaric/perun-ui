@@ -1,14 +1,9 @@
 # perun-ui
 
-A simple wrapper for [shadcn/ui](https://github.com/shadcn-ui/ui), just for my own convenience.
-
-- style: New York
-- icons: [Lucide](https://lucide.dev/icons/)
-
 ## Install
 
 ```sh
-pnpm add shadcn-react
+pnpm add perun-ui
 ```
 
 ## Usage
@@ -16,23 +11,13 @@ pnpm add shadcn-react
 Import `style.css` in the App root:
 
 ```tsx
-import "shadcn-react/style.css";
+import 'perun-ui/style.css';
 ```
 
 Then use the components:
 
 ```tsx
-import { Button } from "shadcn-react";
-
-export default function MyComponent() {
-  return <Button>Hello world</Button>;
-}
-```
-
-Use the original shadcn-ui components:
-
-```tsx
-import { Button } from "shadcn-react/ui";
+import { Button } from 'perun-ui/ui';
 
 export default function MyComponent() {
   return <Button>Hello world</Button>;
@@ -42,7 +27,7 @@ export default function MyComponent() {
 Use [lucide icons](https://lucide.dev/icons/):
 
 ```tsx
-import { RocketIcon } from "shadcn-react/icons";
+import { RocketIcon } from 'perun-ui/icons';
 
 export default function MyComponent() {
   return <RocketIcon />;
