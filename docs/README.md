@@ -1,0 +1,5 @@
+import { Markdown } from '@storybook/blocks';
+
+import readme from "../README.md?raw";
+
+<Markdown>{readme}</Markdown>
