@@ -1,5 +1,7 @@
 # perun-ui
 
+> A tasteful flavour of shadcn-ui
+
 ## Install
 
 ```sh

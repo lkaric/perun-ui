@@ -1,19 +1,19 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-import remarkGfm from "remark-gfm";
+import type { StorybookConfig } from '@storybook/react-vite';
+import remarkGfm from 'remark-gfm';
 
 const config: StorybookConfig = {
   stories: [
-    "../src/**/*.mdx",
-    "../docs/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    '../src/**/*.mdx',
+    '../docs/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
   addons: [
-    "@storybook/addon-links",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
-    "@storybook/addon-themes",
+    '@storybook/addon-links',
+    '@chromatic-com/storybook',
+    '@storybook/addon-interactions',
+    '@storybook/addon-themes',
     {
-      name: "@storybook/addon-essentials",
+      name: '@storybook/addon-essentials',
       options: {
         docs: true,
         actions: true,
@@ -29,11 +29,11 @@ const config: StorybookConfig = {
     },
   ],
   framework: {
-    name: "@storybook/react-vite",
+    name: '@storybook/react-vite',
     options: {},
   },
   typescript: {
-    reactDocgen: "react-docgen",
+    reactDocgen: 'react-docgen',
   },
 };
 export default config;
