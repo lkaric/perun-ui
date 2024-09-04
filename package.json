@@ -5,6 +5,7 @@
   "description": "Another take at UI",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://perun-ui.lazar.sh/",
   "author": {
     "name": "Lazar Karic",
     "email": "hi@lazar.sh",
@@ -12,7 +13,7 @@
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook:build": "storybook build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:strict": "eslint '*/**/*.{js,jsx,ts,tsx}'",
