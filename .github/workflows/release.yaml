@@ -2,12 +2,10 @@ name: Release
 
 on:
   push:
-    branches:
-      - main
-      - next
+    branches: ['main', 'next']
 
 permissions:
-  content: write
+  contents: write
   issues: write
   pull-requests: write
 
@@ -35,6 +33,5 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpx semantic-release
