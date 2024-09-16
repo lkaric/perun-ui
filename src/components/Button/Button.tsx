@@ -3,7 +3,7 @@ import { Slot } from '@radix-ui/react-slot';
 
 import { buttonVariants, type ButtonVariantProps } from './Button.cva';
 
-import { cn } from '../../utils';
+import { cn } from '../../utils/index';
 
 import './Button.style.css';
 

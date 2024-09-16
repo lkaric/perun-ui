@@ -1,9 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "perun-ui",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Another take at UI",
-  "main": "index.js",
   "type": "module",
   "homepage": "https://perun-ui.lazar.sh/",
   "author": {
@@ -17,8 +16,47 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:strict": "eslint '*/**/*.{js,jsx,ts,tsx}'",
+    "build": "vite build && tsc -p ./tsconfig.build.json",
     "prettier": "prettier --write */**/*.{js,cjs,json,ts,tsx,css,md}",
+    "semantic-release": "semantic-release",
     "prepare": "husky"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./ui": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.ts",
+      "default": "./dist/icons.js",
+      "import": "./dist/icons.js",
+      "require": "./dist/icons.cjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "default": "./dist/utils.js",
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.cjs"
+    },
+    "./style.css": {
+      "default": "./dist/style.css",
+      "import": "./dist/style.css"
+    }
   },
   "keywords": [],
   "license": "MIT",
@@ -61,11 +99,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remark-gfm": "^4.0.0",
+    "semantic-release": "^24.1.1",
     "storybook": "^8.2.9",
     "tailwindcss": "^3.4.10",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
+    "vite-plugin-libcss": "^1.1.1",
     "vite-tsconfig-paths": "^5.0.1"
   },
   "dependencies": {
