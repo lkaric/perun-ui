@@ -4,3 +4,4 @@ export * from './Badge';
 export * from './Accordion';
 export * from './Checkbox';
 export * from './Label';
+export * from './Input';
