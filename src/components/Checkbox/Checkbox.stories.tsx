@@ -1,0 +1,37 @@
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { Checkbox as CheckboxComponent, type CheckboxProps } from './Checkbox';
+
+const meta = {
+  title: 'components/Checkbox',
+  component: CheckboxComponent,
+  parameters: {
+    layout: 'centered',
+  },
+} satisfies Meta<CheckboxProps>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
+  render: (args) => (
+    <div className="items-top flex space-x-2">
+      <CheckboxComponent {...args} />
+      <div className="grid gap-1.5 leading-none">
+        <label
+          htmlFor="terms1"
+          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Accept terms and conditions
+        </label>
+        <p className="text-sm text-muted-foreground">
+          You agree to our Terms of Service and Privacy Policy.
+        </p>
+      </div>
+    </div>
+  ),
+  args: {
+    id: 'terms1',
+  },
+};
